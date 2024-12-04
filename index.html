@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            @import url(folder/clock.css);
+        </style>
+    </head>
+    <body>
+        <!--時計-->
+        <div id="time-container">
+            <div id="time-container-top">
+                <div id="calendar" class="time-content"><span id="date"></span><span id="day"></span></div>
+                <div class="live time-content"><span id="live-icon" class="material-icons-round">bolt</span></div>
+                <div id="live-text-anime" class="live time-content"><span id="live-text">Live</span></div>
+            </div>
+            <div id="time" class="time-content"></div>
+        </div>
+        <!--コントロールパネル-->
+        <iframe id="control" src="control.html" frameborder="0"></iframe>
+        <input id="panel-close" type="image" src="folder/close.svg" onclick="panelClose()">
+        <input id="panel-open" type="image" src="folder/open.svg" onclick="panelOpen()">
+        <!--コントロールへのリンク-->
+        <footer>
+            <a href="control.html" target="_blank">コントロール</a>
+        </footer>
+
+        <script src="folder/clock.js"></script>
+    </body>
+</html>
