@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            @import url(folder/control.css);
+        </style>
+    </head>
+    <body>
+        <!--背景ON・OFF切替-->
+        <div id="bg-container">
+            <div id="bg-on" class="input-box">
+                <input id="change-bg" class="change-button" type="button" value="背景を付ける" onclick="changeBg()">
+                <p>時計の境界を見やすくするために背景を付けます。</p>
+            </div>
+            <div id="bg-off" class="input-box">
+                <input id="reset-bg" class="change-button" type="button" value="背景を削除する" onclick="resetBg()">
+                <p>OBSで配信する際は背景を削除してください。</p>
+            </div>
+        </div>
+        <!--テーマ切替-->
+        <hr>
+        <h2>カラー</h2>
+        <div id="color-container">
+            <div id="default-box" class="input-box color-box">
+                <input id="change-default" class="change-button" type="button" value="デフォルト" onclick="changeColorDefault()">
+                <p></p>
+            </div>
+            <div id="blue-box" class="input-box color-box">
+                <input id="change-blue" class="change-button" type="button" value="BLUE" onclick="changeColorBlue()">
+                <p></p>
+            </div>
+            <div id="pink-box" class="input-box color-box">
+                <input id="change-pink" class="change-button" type="button" value="PINK" onclick="changeColorPink()">
+                <p></p>
+            </div>
+            <div id="yellow-box" class="input-box color-box">
+                <input id="change-yellow" class="change-button" type="button" value="YELLOW" onclick="changeColorYellow()">
+                <p></p>
+            </div>
+        </div>
+        <!--フォント切替-->
+        <hr>
+        <h2>フォント</h2>
+        <div id="font-container">
+            <div id="kosugi-box" class="input-box font-box">
+                <input id="change-kosugi" class="change-button" type="button" value="Kosugi Maru" onclick="changeKosugi()">
+                <p>12/31 (日)</br>20:45 Live</p>
+            </div>
+            <div id="mround-box" class="input-box font-box">
+                <input id="change-mround" class="change-button" type="button" value="M+ Rounded" onclick="changeMround()">
+                <p>12/31 (日)</br>20:45 Live</p>
+            </div>
+            <div id="kiwi-box" class="input-box font-box">
+                <input id="change-kiwi" class="change-button" type="button" value="Kiwi Maru" onclick="changeKiwi()">
+                <p>12/31 (日)</br>20:45 Live</p>
+            </div>
+            <div id="noto-box" class="input-box font-box">
+                <input id="change-noto" class="change-button" type="button" value="Noto Sans" onclick="changeNoto()">
+                <p>12/31 (日)</br>20:45 Live</p>
+            </div>
+        </div>
+
+        <script src="folder/manage.js"></script>
+    </body>
+</html>
