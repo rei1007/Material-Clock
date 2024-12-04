@@ -1,0 +1,174 @@
+/*GoogleFonts読み込み*/
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Kosugi+Maru&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+:root {
+    background: #c0c0c0;
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*背景を削除の選択肢を初期状態では非表示*/
+#bg-off {
+    display: none;
+}
+
+/*各タイトル*/
+h2 {
+    margin: 20px 10px 10px 20px;
+    font-size: 24px;
+    line-height: 24px;
+}
+hr {
+    margin-top: 20px;
+    border: solid 1px #000;
+}
+
+/*選択パネル共通*/
+.input-box {
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    height: fit-content;
+    background: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    .change-button {
+        width: 160px;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 20px;
+        border: none;
+        border-radius: 20px;
+        transition: all 0.4s 0s ease;
+    }
+    .change-button:hover {
+        background: #e8e8e8;
+        color: #000;
+    }
+    .change-button:active {
+        animation: anime-click 0.1s;
+    }
+    @keyframes anime-click {
+        0% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(5px);
+        }
+        80% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    p {
+        margin: 10px 0 0 0;
+        padding: 20px;
+        background: #e0e0e0;
+        color: #000;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 20px;
+    }
+}
+
+/*背景切替パネル*/
+#bg-container {
+    margin-top: 20px;
+}
+
+/*テーマ切替パネル*/
+#color-container {
+    display: flex;
+    flex-wrap: wrap;
+    #default-box {
+        border: solid 4px #000;
+    }
+    #blue-box {
+        background: #f7f9ff;
+        .change-button {
+            background: #28638a;
+            color: #fff;
+            transition: all 0.4s 0s ease;
+        }
+        .change-button:hover {
+            background: #cae6ff;
+            color: #001e30;
+        }
+        .change-button:active {
+            animation: anime-click 0.1s;
+        }
+        p {
+            background: #d3e5f6;
+        }
+    }
+    #pink-box {
+        background: #fff8f8;
+        .change-button {
+            background: #874b6c;
+            color: #fff;
+            transition: all 0.4s 0s ease;
+        }
+        .change-button:hover {
+            background: #ffd8e9;
+            color: #380727;
+        }
+        .change-button:active {
+            animation: anime-click 0.1s;
+        }
+        p {
+            background: #fcd9e8;
+        }
+    }
+    #yellow-box {
+        background: #fff8f8;
+        .change-button {
+            background: #867631;
+            color: #fff;
+            transition: all 0.4s 0s ease;
+        }
+        .change-button:hover {
+            background: #f7ebc2;
+            color: #221b00;
+        }
+        .change-button:active {
+            animation: anime-click 0.1s;
+        }
+        p {
+            background: #eee2bc;
+        }
+    }
+}
+
+/*フォント切替パネル*/
+#font-container {
+    display: flex;
+    flex-wrap: wrap;
+    p {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    #kosugi-box {
+        font-family: "Kosugi Maru", sans-serif;
+    }
+    #mround-box {
+        font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+    #kiwi-box {
+        font-family: "Kiwi Maru", sans-serif;
+    }
+    #noto-box {
+        font-family: "Noto Sans JP", sans-serif;
+    }
+}
