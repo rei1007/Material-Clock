@@ -3,7 +3,7 @@ window.onload = function() {
     window.localStorage.setItem("bg-color", "transparent");
     window.localStorage.setItem("bg-state", "bg-trans");
     const cascade = ["time-container-bg", "date-color", "date-bg", "live-color", "time-color", "time-bg"];
-    const color = ["#fff", "#fff", "#000", "#000", "#000", "#e0e0e0"];
+    const color = ["#ffffff", "#ffffff", "#000000", "#000000", "#000000", "#e0e0e0"];
     for (let i = 0; i < cascade.length; i++) {
         window.localStorage.setItem(cascade[i], color[i]);
     }
