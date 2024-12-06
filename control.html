@@ -12,16 +12,52 @@
         <div id="bg-container">
             <div id="bg-on" class="input-box">
                 <input id="change-bg" class="change-button" type="button" value="背景を付ける" onclick="changeBg()">
-                <p>時計の境界を見やすくするために背景を付けます。</p>
+                <p>時計の境界を見やすくするために背景を付けます</p>
             </div>
             <div id="bg-off" class="input-box">
                 <input id="reset-bg" class="change-button" type="button" value="背景を削除する" onclick="resetBg()">
-                <p>OBSで配信する際は背景を削除してください。</p>
+                <p>OBSで配信する際は背景を削除してください</p>
             </div>
         </div>
         <!--テーマ切替-->
         <hr>
-        <h2>カラー</h2>
+        <div class="container-hedder">
+            <h2>カラー</h2>
+            <input id="open-color-form" class="open-form" type="button" value="カスタム設定" onclick="openColorForm()">
+            <div id="custom-color-notification"><img class="notification-icon" src="folder/notification.svg"><p class="notification-text">カスタム設定が適用されています</p></div>
+        </div>
+        <!--カラー詳細設定フォーム-->
+        <div id="color-form">
+            <div class="form-content">
+                <label for="change-time-container-bg" class="form-label">全体背景色</label>
+                <input id="change-time-container-bg" class="form-input" type="color">
+            </div>
+            <div class="form-content">
+                <label for="change-live-color" class="form-label">Liveの文字色</label>
+                <input id="change-live-color" class="form-input" type="color">
+            </div>
+            <div class="form-content">
+                <label for="change-date-color" class="form-label">日付の文字色</label>
+                <input id="change-date-color" class="form-input" type="color">
+            </div>
+            <div class="form-content">
+                <label for="change-date-bg" class="form-label">日付の背景色</label>
+                <input id="change-date-bg" class="form-input" type="color">
+            </div>
+            <div class="form-content">
+                <label for="change-time-color" class="form-label">時間の文字色</label>
+                <input id="change-time-color" class="form-input" type="color">
+            </div>
+            <div class="form-content">
+                <label for="change-time-bg" class="form-label">時間の背景色</label>
+                <input id="change-time-bg" class="form-input" type="color">
+            </div>
+            <div id="sent-box">
+                <input id="sent-color-code" class="change-button" type="button" value="適用" onclick="setColorCode()">
+                <input id="panel-close" type="image" src="folder/close.svg" onclick="closeColorForm()">
+            </div>
+        </div>
+        <!--カラー選択パネル-->
         <div id="color-container">
             <div id="default-box" class="input-box color-box">
                 <input id="change-default" class="change-button" type="button" value="デフォルト" onclick="changeColorDefault()">
@@ -42,7 +78,9 @@
         </div>
         <!--フォント切替-->
         <hr>
-        <h2>フォント</h2>
+        <div id="container-hedder">
+            <h2>フォント</h2>
+        </div>
         <div id="font-container">
             <div id="kosugi-box" class="input-box font-box">
                 <input id="change-kosugi" class="change-button" type="button" value="Kosugi Maru" onclick="changeKosugi()">
