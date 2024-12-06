@@ -7,11 +7,9 @@ window.onload = function() {
 function reflection() {
     bgButtonChange();
     showThemeState();
-    setNowColor();
     showFontState();
 }
 setInterval('reflection()', 1000);
-
 
 //背景のON・OFF切替
 function changeBg() {
@@ -47,6 +45,7 @@ function changeColorDefault() {
     }
     window.localStorage.setItem("color-theme", "default-box");
     showThemeState();
+    setNowColor();
 }
 function changeColorBlue() {
     const cascade = ["time-container-bg", "date-color", "date-bg", "live-color", "time-color", "time-bg"];
@@ -56,6 +55,7 @@ function changeColorBlue() {
     }
     window.localStorage.setItem("color-theme", "blue-box");
     showThemeState();
+    setNowColor();
 }
 function changeColorPink() {
     const cascade = ["time-container-bg", "date-color", "date-bg", "live-color", "time-color", "time-bg"];
@@ -65,6 +65,7 @@ function changeColorPink() {
     }
     window.localStorage.setItem("color-theme", "pink-box");
     showThemeState();
+    setNowColor();
 }
 function changeColorYellow() {
     const cascade = ["time-container-bg", "date-color", "date-bg", "live-color", "time-color", "time-bg"];
@@ -74,6 +75,7 @@ function changeColorYellow() {
     }
     window.localStorage.setItem("color-theme", "yellow-box");
     showThemeState();
+    setNowColor();
 }
 //カラーカスタム設定
 function openColorForm() {
