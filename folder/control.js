@@ -7,6 +7,7 @@ window.onload = function() {
 function reflection() {
     bgButtonChange();
     showThemeState();
+    setNowColor();
     showFontState();
 }
 setInterval('reflection()', 1000);
@@ -77,6 +78,9 @@ function changeColorYellow() {
 //カラーカスタム設定
 function openColorForm() {
     document.getElementById("color-form").style.display = 'flex';
+    setNowColor();
+}
+function setNowColor() {
     const colorForms = ["change-time-container-bg", "change-date-bg", "change-date-color", "change-live-color", "change-time-bg", "change-time-color"];
     const colorValues = ["time-container-bg", "date-bg", "date-color", "live-color", "time-bg", "time-color"];
     for (let i = 0; i < colorForms.length; i++) {
