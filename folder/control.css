@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
 :root {
     background: #c0c0c0;
@@ -18,15 +17,68 @@
 }
 
 /*各タイトル*/
-h2 {
-    margin: 20px 10px 10px 20px;
-    font-size: 24px;
-    line-height: 24px;
-}
 hr {
     margin-top: 20px;
     border: solid 1px #000;
 }
+.container-hedder {
+    margin: 10px 0 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+        width: fit-content;
+        height: fit-content;
+        margin: 0;
+        margin: 10px 5px 10px 10px;
+        padding: 0;
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .open-form {
+        width: fit-content;
+        height: fit-content;
+        margin: 10px 5px;
+        padding: 5px 10px;
+        background: #000;
+        color: #fff;
+        font-family: "Kosugi Maru", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 16px;
+        border: none;
+        border-radius: 13px;
+        transition: all 0.4s 0s ease;
+    }
+    .open-form:hover {
+        background: #e8e8e8;
+        color: #000;
+    }
+    #custom-color-notification {
+        margin: 0 10px 0 5px;
+        padding: 0;
+        width: fit-content;
+        height: fit-content;
+        display: none;
+        .notification-icon {
+            width: 20px;
+            height: 20px;
+            margin: 13px 2px 13px 0;
+            filter: invert(37%) sepia(73%) saturate(3942%) hue-rotate(341deg) brightness(92%) contrast(92%);
+            vertical-align: bottom;
+        }
+        .color-custom-notification {
+            width: fit-content;
+            height: fit-content;
+            margin: 15px 0 15px 2px;
+            padding: 0;
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}
+
 
 /*選択パネル共通*/
 .input-box {
@@ -42,7 +94,7 @@ hr {
         padding: 10px;
         background: #000;
         color: #fff;
-        font-family: var(--font-family);
+        font-family: "Kosugi Maru", sans-serif;
         font-weight: 400;
         font-style: normal;
         font-size: 20px;
@@ -55,28 +107,10 @@ hr {
         background: #e8e8e8;
         color: #000;
     }
-    .change-button:active {
-        animation: anime-click 0.1s;
-    }
-    @keyframes anime-click {
-        0% {
-            transform: translateY(0);
-        }
-        40% {
-            transform: translateY(5px);
-        }
-        80% {
-            transform: translateY(-5px);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
     p {
         margin: 10px 0 0 0;
         padding: 20px;
         background: #e0e0e0;
-        color: #000;
         font-size: 16px;
         line-height: 20px;
         border-radius: 20px;
@@ -92,9 +126,6 @@ hr {
 #color-container {
     display: flex;
     flex-wrap: wrap;
-    #default-box {
-        border: solid 4px #000;
-    }
     #blue-box {
         background: #f7f9ff;
         .change-button {
@@ -105,9 +136,6 @@ hr {
         .change-button:hover {
             background: #cae6ff;
             color: #001e30;
-        }
-        .change-button:active {
-            animation: anime-click 0.1s;
         }
         p {
             background: #d3e5f6;
@@ -124,9 +152,6 @@ hr {
             background: #ffd8e9;
             color: #380727;
         }
-        .change-button:active {
-            animation: anime-click 0.1s;
-        }
         p {
             background: #fcd9e8;
         }
@@ -142,12 +167,75 @@ hr {
             background: #f7ebc2;
             color: #221b00;
         }
-        .change-button:active {
-            animation: anime-click 0.1s;
-        }
         p {
             background: #eee2bc;
         }
+    }
+}
+
+/*カラーカスタム設定*/
+#color-form {
+    margin: 0 5px 10px;
+    padding: 5px;
+    max-width: 900px;
+    @media (max-width: 460px) {
+        max-width: 300px;
+    }
+    height: fit-content;
+    background: #fff;
+    border-radius: 30px;
+    display: none;
+    flex-wrap: wrap;
+    .form-content {
+        margin: 5px;
+        padding: 10px;
+        width: 120px;
+        background: #e0e0e0;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 20px;
+        .form-label {
+            margin-bottom: 5px;
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .form-input {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    #sent-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #sent-color-code {
+        width: 80px;
+        height: fit-content;
+        margin: 5px;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        font-family: "Kosugi Maru", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 20px;
+        border: none;
+        border-radius: 20px;
+        transition: all 0.4s 0s ease;
+    }
+    #sent-color-code:hover {
+        background: #e8e8e8;
+        color: #000;
+    }
+    #panel-close {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        vertical-align: top;
     }
 }
 
