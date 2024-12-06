@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
-
 :root {
     --bg-color: transparent;
     background: var(--bg-color);
@@ -33,30 +31,30 @@
     height: fit-content;
     background-color: var(--time-container-bg);
     border-radius: 30px;
-    .time-content {
-        margin: 0;
-        width: fit-content;
-        height: fit-content;
-    }
+}
+.time-content {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
 }
 #time-container-top {
     display: flex;
-    /*日付*/
-    #calendar {
-        margin: 0 10px 5px 0;
-        padding: 10px;
-        color: var(--date-color);
-        background-color: var(--date-bg);
-        border-radius: 20px;
-        #date {
-            font-size: 20px;
-            line-height: 20px;
-        }
-        #day {
-            font-size: 16px;
-            line-height: 16px;
-        }
-    }
+}
+/*日付*/
+#calendar {
+    margin: 0 10px 5px 0;
+    padding: 10px;
+    color: var(--date-color);
+    background-color: var(--date-bg);
+    border-radius: 20px;
+}
+#date {
+    font-size: 20px;
+    line-height: 20px;
+}
+#day {
+    font-size: 16px;
+    line-height: 16px;
 }
 /*Live*/
 .live {
@@ -64,9 +62,8 @@
     padding: 10px 0;
 }
 #live-icon {
-    color: #e33636;
-    font-size: 20px;
-    line-height: 20px;
+    filter: invert(37%) sepia(73%) saturate(3942%) hue-rotate(341deg) brightness(92%) contrast(92%);
+    vertical-align: top;
     animation: anime-live 5s infinite;
 }
 #live-text {
@@ -116,6 +113,7 @@
     line-height: 60px;
 }
 
+/*コントロールパネル*/
 #control {
     height: 100%;
     width: 460px;
@@ -125,11 +123,15 @@
     right: 0;
 }
 #panel-close {
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 10px;
     right: 20px;
 }
 #panel-open {
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 10px;
     right: 20px;
@@ -147,17 +149,17 @@ footer {
     bottom: 10px;
     background: #000;
     transition: all 0.4s 0s ease;
-    a {
-        color: #fff;
-        text-decoration: none;
-        text-align: center;
-        font-size: 25px;
-        line-height: 25px;
-    }
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    line-height: 25px;
 }
 footer:hover {
     background: #e0e0e0;
-    a {
-        color: #000;
-    }
+}
+footer:hover a {
+    color: #000;
 }
